@@ -4,7 +4,7 @@ import { TrainingComponent } from './training/training.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'training.zuri.team', component: TrainingComponent }
+  { path: 'training', component: TrainingComponent }
 ];
 
 @NgModule({
