@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TrainingComponent } from './training/training.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'training', component: TrainingComponent }
+  { path: '',loadChildren:()=>import('./pages/home/home.module').then(m=>m.HomeModule)},
+  { path: 'training', loadChildren:()=>import('./pages/training/training.module').then(m=>m.TrainingModule)},
+  { path: 'talent', loadChildren:()=>import('./pages/talent/talent.module').then(m=>m.TalentModule)}
 ];
 
 @NgModule({
